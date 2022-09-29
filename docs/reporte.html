@@ -70,7 +70,7 @@
 				<tr>
 					<td style="border:0px;padding:0px;border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">&nbsp;</td>
 					<td align="center" style="border:0px;padding:0px;border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
-						<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="contentInner" id="contentInner" style="border-collapse:collapse; border:0px;font-size:12px;background-color:#ffffff;background-color:#ffffff;width:600px;margin:0px auto;border:0px;" width="600">
+						<table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="contentInner" id="contentInner" style="border-collapse:collapse; border:0px;font-size:12px;background-color:#ffffff;background-color:#ffffff;width:800px;margin:0px auto;border:0px;">
 							<tbody>
 								<tr>
 									<td min-height="570" style="border:0px;padding:0px;" valign="top">
@@ -178,7 +178,7 @@
 																						<tbody>
 																							<tr>
 																								<td class="paddingcomp" style="border:0px;padding:7px 15px;text-align:center;padding-top:7px;padding-bottom:7px;padding-right:15px;padding-left:15px;">
-																									<img align="left" alt="cabecera pa que te armes la fiesta" class="zpImage" height="auto" hspace="0" size="F" src="https://campaign-image.com/zohocampaigns/856688000002426006_zc_v7_1652982471981_back_para_cabecera_de_lp.png" style="width:570px;height:autopx;max-width:570px !important;border:0px;text-align:left;" title="cabecera pa que te armes la fiesta" vspace="0" width="570">
+																									<img alt="cabecera pa que te armes la fiesta" class="zpImage" height="auto" hspace="0" size="F" src="https://campaign-image.com/zohocampaigns/856688000002426006_zc_v7_1652982471981_back_para_cabecera_de_lp.png" style="width:570px;height:autopx;max-width:570px !important;border:0px;text-align:left;" title="cabecera pa que te armes la fiesta" vspace="0" width="570">
 																								</td>
 																							</tr>
 																							<tr>
@@ -245,7 +245,7 @@
 																								<table id="dataTable" width="100%" cellspacing="0" class="table table-bordered">
 																									<thead>
 																										<tr class="bg-warning text-darkher">
-																											<th>Tienda</th>
+																											<th width="60%">Tienda</th>
 																											<th>Ventas Registradas</th>
 																											<th>Folios Generados</th>
 																										</tr>
@@ -292,7 +292,7 @@
 			let nameEvent = 'Paquete armes El Verano 2022'
             let body = {nameEvent};
 
-			const request = await fetch(`http://localhost:5008/api/v1/back/resum-report`, {
+			const request = await fetch(`https://promoverano.hermesmusicclub.mx/api/v1/back/resum-report`, {
 				method:'POST',
 				headers:{
 					'Content-Type':'application/json',

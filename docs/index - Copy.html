@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pa´que te armes el verano</title>
+    <link rel="preload" href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css'  as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body class="bg__image">
+   <img src="assets/images/HEADER-FORMULARIO.png" class="img-fluid" alt="paquete armes la fiesta">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12  p-4 rounded">
+                   <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:20%;" id="progressBar">
+                        <b class="lead" id="progressText">Paso - 1</b>
+                    </div>
+                   </div>
+                    <form id="form-data" action="" method="post">
+
+                        <!--PRIMER VENTANA-->
+                        <div id="first">
+                            <h2 class="text__cabe">Elige donde realizaste tu compra</h2>
+                            <div class="row">
+                                <div class="col-6 col-md-6">
+                                    <a href="#" id="next-1" onclick="getTipoCompra(1);">
+                                        <img src="assets/images/ecommerce2.png" class="img-fluide" alt="Compra en Linea Hermes Music" title="Compra en Línea">
+                                    </a>
+                                    <br><br><br>
+                                   <center>
+                                    <a href="#" class="btn btn__black" id="next-13" onclick="getTipoCompra(1);">
+                                        Compra en Línea
+                                    </a>
+                                   </center>
+                                </div>
+                                <div class="col-6 col-md-6">
+                                    <a href="#" class="img__hover" id="next-1-1" onclick="getTipoCompra(2);">
+                                        <img src="assets/images/restaurant2.png" class="img-fluide" alt="Compra en Tienda Hermes Music" title="Compra en Tienda">
+                                    </a>
+                                    <br><br><br>
+                                  <center>
+                                    <a href="#" class="btn btn__black" id="next-12" onclick="getTipoCompra(2);">
+                                        Compra en Tienda
+                                    </a>
+                                  </center>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!--SEGUNDA VENTANA-->
+                        <div id="second">
+                            <h2 class="text__cabe">Completa los campos de tu compra en línea</h2>
+                            <div class="form-group">
+                                <label>Número de Pedido</label>
+                                <input id="ov1" type="text" name="ov1" class="form-control" required>
+                                <b class="form-text text-success" id="ov_err1"></b>
+                            </div>
+                            <div class="form-group">
+                                <label>Importe</label>
+                                <input id="importe1" type="text" name="importe1" class="form-control" required>
+                                <b class="form-text text-success" id="importe_err1"></b>
+                            </div>
+                            <div class="form-group">
+                                <label>Fecha de Venta</label>
+                                <input id="fecha1" type="date" name="fecha1" class="form-control" required>
+                                <b class="form-text text-success" id="fecha_err1"></b>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                  <label>Nombre Completo</label>
+                                  <input type="text" class="form-control" id="nombre1" name="nombre1" required>
+                                  <b class="form-text text-success" id="nombre_err1"></b>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Celular</label>
+                                    <input type="text" class="form-control" id="cel1" name="cel1" required>
+                                    <b class="form-text text-success" id="cel_err1"></b>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label class="labe">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="email1" name="email1" required oncopy="return false" onpaste="return false">
+                                    <b class="form-text text-success" id="email_err1"></b>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="labe">Confirmar Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="email1_1" name="email1_1" required oncopy="return false" onpaste="return false">
+                                    <b class="form-text text-success" id="email_err1_1"></b>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                    <label>Estado</label>
+                                    <select class="form-control" id="estado1" name="estado1">
+                                      <option value="">Elige tu Estado</option>
+                                      <option value="Aguascalientes">Aguascalientes</option>
+                                      <option value="Baja California">Baja California</option>
+                                      <option value="Baja California Sur">Baja California Sur</option>
+                                      <option value="Campeche">Campeche</option>
+                                      <option value="CDMX">CDMX</option>
+                                      <option value="Chiapas">Chiapas</option>
+                                      <option value="Chihuahua">Chihuahua</option>
+                                      <option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
+                                      <option value="Colima">Colima</option>
+                                      <option value="Durango">Durango</option>
+                                      <option value="Estado de México">Estado de México</option>
+                                      <option value="Guanajuato">Guanajuato</option>
+                                      <option value="Guerrero">Guerrero</option>
+                                      <option value="Hidalgo">Hidalgo</option>
+                                      <option value="Jalisco">Jalisco</option>
+                                      <option value="Michoacán de Ocampo">Michoacán de Ocampo</option>
+                                      <option value="Morelos">Morelos</option>
+                                      <option value="Nayarit">Nayarit</option>
+                                      <option value="Nuevo León">Nuevo León</option>
+                                      <option value="Oaxaca">Oaxaca</option>
+                                      <option value="Puebla">Puebla</option>
+                                      <option value="Querétaro">Querétaro</option>
+                                      <option value="Quintana Roo">Quintana Roo</option>
+                                      <option value="San Luis Potosí">San Luis Potosí</option>
+                                      <option value="Sinaloa">Sinaloa</option>
+                                      <option value="Sonora">Sonora</option>
+                                      <option value="Tabasco">Tabasco</option>
+                                      <option value="Tamaulipas">Tamaulipas</option>
+                                      <option value="Tlaxcala">Tlaxcala</option>
+                                      <option value="Veracruz de Ignacio de la Llave">Veracruz de Ignacio
+                                          de la Llave</option>
+                                      <option value="Yucatán">Yucatán</option>
+                                      <option value="Zacatecas">Zacatecas</option>
+                                    </select>
+                                    <b class="form-text text-success" id="estado_err1"></b>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label>Ciudad</label>
+                                    <input type="text" class="form-control" id="ciudad1" name="ciudad1">
+                                    <b class="form-text text-success" id="ciudad_err1"></b>
+                                  </div>
+                            </div>
+                            <h2 class="text__cabe">Contesta las siguientes preguntas</h2>
+                            <!--Primer Preunnta-->
+                            <div class="form-group">
+                                <h4 class="pre__tri">¿Bad Bunny es representate de que genero musical?</h4>
+								<b class="form-text text-success" id="quest1_1_err"></b>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest1_1" id="quest1_1_1" value="option1">
+                                <label class="form-check-label" for="quest1_1_1"> Reggateon  </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest1_1" id="quest1_1_2" value="option2">
+                                <label class="form-check-label" for="quest1_1_2"> Heavy Metal</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest1_1" id="quest1_1_3" value="option3">
+                                <label class="form-check-label" for="quest1_1_3">Música Clásica </label>
+                            </div>
+                            <br><br>
+                             <!--segunda Preunnta-->
+                             <div class="form-group">
+                                <h4 class="pre__tri">¿Qué instrumento músical se caracteriza por tener 6 cuerdas?</h4>
+								<b class="form-text text-success" id="quest2_1_err"></b>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest2_1" id="quest2_1_1" value="option11">
+                                <label class="form-check-label" for="quest2_1_1">Pandero</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest2_1" id="quest2_1_2" value="option12">
+                                <label class="form-check-label" for="quest2_1_2">Guitarra</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest2_1" id="quest2_1_3" value="option13">
+                                <label class="form-check-label" for="quest2_1_3">Batería </label>
+                            </div>
+                            <br><br>
+                             <!--tercer Preunnta-->
+                             <div class="form-group">
+                                <h4 class="pre__tri">¿Qué famosa cantante es hermana de Michael Jackson?</h4>
+								<b class="form-text text-success" id="quest3_1_err"></b>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest3_1" id="quest3_1_1" value="option21">
+                                <label class="form-check-label" for="quest3_1_1">Christina Aguilera  </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest3_1" id="quest3_1_2" value="option211">
+                                <label class="form-check-label" for="quest3_1_2"> Janet Jackson</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest3_1" id="quest3_1_3" value="option31">
+                                <label class="form-check-label" for="quest3_1_3">Britney Spears</label>
+                            </div>
+                            <br><br>
+                            <!--cuarta Preunnta-->
+                            <div class="form-group">
+                                <h4 class="pre__tri">¿Qué cantante es reconocido por éxitos como Thriller, Beat It, Billie Jean y Smooth Criminal?</h4>
+								<b class="form-text text-success" id="quest4_1_err"></b>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest4_1" id="quest4_1_1" value="option1_1">
+                                <label class="form-check-label" for="quest4_1_1">Manuel Mijares</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest4_1" id="quest4_1_2" value="option1_2">
+                                <label class="form-check-label" for="quest4_1_2">Michael Jackson</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest4_1" id="quest4_1_3" value="option1_3">
+                                <label class="form-check-label" for="quest4_1_3">Luis Miguel</label>
+                            </div>
+                            <br><br>
+
+
+                            <div class="form-group">
+                                <a href="#" class="btn btn__red" id="prev-2">Anterior</a>
+                                <button name="submit" id="submite" class="btn btn__greene" onclick="getBoletos();">Generar Boletos</button>
+                            </div>
+                        </div>
+
+
+                        <!--TERCERA VENTANA-->
+                        <div id="third">
+                            <h2 class="text__cabe">Completa los campos de tu compra en Tienda</h2>
+                            <div class="form-group">
+                                <label>OV (Orden de Venta) </label> <i class='bx bx-question-mark icono' data-toggle="modal" data-target="#factura"></i>
+                                <input id="ov2" type="text" name="ov2" class="form-control" required>
+                                <b class="form-text text-success" id="ov_err2"></b>
+                            </div>
+                            <div class="form-group">
+                                <label>Importe</label> <i class='bx bx-question-mark icono' data-toggle="modal" data-target="#exampleModal"></i>
+                                <input id="importe2" type="text" name="importe2" class="form-control" required>
+                                <b class="form-text text-success" id="importe_err2"></b>
+                            </div>
+                            <div class="form-group">
+                                <label>Fecha de Venta</label> <i class='bx bx-question-mark icono' data-toggle="modal" data-target="#example"></i>
+                                <input id="fecha2" type="date" name="fecha2" class="form-control" required>
+                                <b class="form-text text-success" id="fecha_err2"></b>
+                            </div>
+                           
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                  <label>Nombre Completo</label>
+                                  <input type="text" class="form-control" id="nombre2" name="nombre2" required>
+                                  <b class="form-text text-success" id="nombre_err2"></b>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Celular</label>
+                                    <input type="text" class="form-control" id="cel2" name="cel2" required>
+                                    <b class="form-text text-success" id="cel_err2"></b>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label class="labe">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="email2" name="email2" required oncopy="return false" onpaste="return false">
+                                    <b class="form-text text-success" id="email_err2"></b>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="labe">Confirmar Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="email2_1" name="email2_1" required oncopy="return false" onpaste="return false">
+                                    <b class="form-text text-success" id="email_err2_1"></b>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                    <label>Estado</label>
+                                    <select class="form-control" id="estado2" name="estado2">
+                                      <option value="">Elige tu Estado</option>
+                                      <option value="Aguascalientes">Aguascalientes</option>
+                                      <option value="Baja California">Baja California</option>
+                                      <option value="Baja California Sur">Baja California Sur</option>
+                                      <option value="Campeche">Campeche</option>
+                                      <option value="CDMX">CDMX</option>
+                                      <option value="Chiapas">Chiapas</option>
+                                      <option value="Chihuahua">Chihuahua</option>
+                                      <option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
+                                      <option value="Colima">Colima</option>
+                                      <option value="Durango">Durango</option>
+                                      <option value="Estado de México">Estado de México</option>
+                                      <option value="Guanajuato">Guanajuato</option>
+                                      <option value="Guerrero">Guerrero</option>
+                                      <option value="Hidalgo">Hidalgo</option>
+                                      <option value="Jalisco">Jalisco</option>
+                                      <option value="Michoacán de Ocampo">Michoacán de Ocampo</option>
+                                      <option value="Morelos">Morelos</option>
+                                      <option value="Nayarit">Nayarit</option>
+                                      <option value="Nuevo León">Nuevo León</option>
+                                      <option value="Oaxaca">Oaxaca</option>
+                                      <option value="Puebla">Puebla</option>
+                                      <option value="Querétaro">Querétaro</option>
+                                      <option value="Quintana Roo">Quintana Roo</option>
+                                      <option value="San Luis Potosí">San Luis Potosí</option>
+                                      <option value="Sinaloa">Sinaloa</option>
+                                      <option value="Sonora">Sonora</option>
+                                      <option value="Tabasco">Tabasco</option>
+                                      <option value="Tamaulipas">Tamaulipas</option>
+                                      <option value="Tlaxcala">Tlaxcala</option>
+                                      <option value="Veracruz de Ignacio de la Llave">Veracruz de Ignacio
+                                          de la Llave</option>
+                                      <option value="Yucatán">Yucatán</option>
+                                      <option value="Zacatecas">Zacatecas</option>
+                                    </select>
+                                    <b class="form-text text-success" id="estado_err2"></b>
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label>Ciudad</label>
+                                    <input type="text" class="form-control" id="ciudad2" name="ciudad2">
+                                    <b class="form-text text-success" id="ciudad_err2"></b>
+                                  </div>
+                            </div>
+                            <h2 class="text__cabe">Contesta las siguientes preguntas</h2>
+                            <!--Primer Preunnta-->
+                            <div class="form-group">
+                                <h4 class="pre__tri">¿Bad Bunny es representate de que genero musical?</h4>
+								<b class="form-text text-success" id="quest1_2_err"></b>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest1_2" id="quest1_2_1" value="option1">
+                                <label class="form-check-label" for="quest1_2_1">Reggateon </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest1_2" id="quest1_2_2" value="option2">
+                                <label class="form-check-label" for="quest1_2_2">Heavy Metal</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest1_2" id="quest1_2_3" value="option3">
+                                <label class="form-check-label" for="quest1_2_3"> Música Clásica</label>
+                            </div>
+                            <br><br>
+                             <!--segunda Preunnta-->
+                             <div class="form-group">
+                                <h4 class="pre__tri">¿Qué instrumento músical se caracteriza por tener 6 cuerdas?</h4>
+								<b class="form-text text-success" id="quest2_2_err"></b>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest2_2" id="quest2_2_1" value="option11">
+                                <label class="form-check-label" for="quest2_2_1">Batería </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest2_2" id="quest2_2_2" value="option12">
+                                <label class="form-check-label" for="quest2_2_2">Guitarra</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest2_2" id="quest2_2_3" value="option13">
+                                <label class="form-check-label" for="quest2_2_3">Pandero</label>
+                            </div>
+                            <br><br>
+                             <!--tercer Preunnta-->
+                             <div class="form-group">
+                                <h4 class="pre__tri">¿Qué famosa cantante es hermana de Michael Jackson?</h4>
+								<b class="form-text text-success" id="quest3_2_err"></b>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest3_2" id="quest3_2_1" value="option21">
+                                <label class="form-check-label" for="quest3_2_1"> Christina Aguilera</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest3_2" id="quest3_2_2" value="option211">
+                                <label class="form-check-label" for="quest3_2_2">Janet Jackson</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest3_2" id="quest3_2_3" value="option31">
+                                <label class="form-check-label" for="quest3_2_3">Britney Spears</label>
+                            </div>
+                            <br><br>
+                            <!--cuarta Preunnta-->
+                            <div class="form-group">
+                                <h4 class="pre__tri">¿Qué cantante es reconocido por éxitos como Thriller, Beat It, Billie Jean y Smooth Criminal?</h4>
+								<b class="form-text text-success" id="quest4_2_err"></b>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest4_2" id="quest4_2_1" value="option1_1">
+                                <label class="form-check-label" for="quest4_2_1">Manuel Mijares </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest4_2" id="quest4_2_2" value="option1_2">
+                                <label class="form-check-label" for="quest4_2_2">Michael Jackson</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="quest4_2" id="quest4_2_3" value="option1_3">
+                                <label class="form-check-label" for="quest4_2_3"> Luis Miguel</label>
+                            </div>
+                            <br><br>
+
+
+                            <div class="form-group">
+                                <a href="#" class="btn btn__red" id="prev-3">Anterior</a>
+								<button name="submit" id="submite" class="btn btn__greene" onclick="getBoletos();">Generar Boletos</button>
+                            </div>
+                        </div>
+                        
+                      
+                        
+                        <div id="resultado">
+                            <h2 class="text__cabe"> Gracias por registrarte y participar en Pa'quete armes EL VERANO</h2>
+                            <p class="text__cabe" id="result-text">
+                                VALIDANDO...
+                                <br />
+                                <img src="assets/images/loading.gif" alt="loading" height="44" width="44">
+                            </p>
+
+                            <p class="text__cabe">Gracias por tu preferencia.</p>
+                            <p class="text__foo" style="text-align: center;">Dudas al email: jorge.camargo@hermes-music.com.mx</p>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="text__foo">
+            Por cada $500 mxn de compra en todo nuestro catálogo de productos en cualquiera de nuestras sucursales o en tienda en línea 
+            obtén una oportunidad para ganar un increíble paquete con un valor aproximado de $26,000 MXN!.
+            <br>
+            Consulta las bases en:
+            <strong><a class="lin__foo" href="https://hermesmusicclub.mx/pages/bases-paquetearmeselverano" target="_blank">hermesmusicclub.mx/pages/bases-paquetearmeselverano</a></strong>
+        </p>
+    </footer>
+
+    
+    <!--Modal de ov-->
+    <div class="modal fade" id="factura" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Esta es tu Orden de Venta</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <img loading="lazy" class="img-fluid" src="assets/images/OV-indicador.jpg" alt="Indicador de OV">
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Entiendo</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!--Modal de importe-->
+    <div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Este es el Importe de tu factura</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <img loading="lazy" class="img-fluid" src="assets/images/imoprte-indicador.jpg" alt="">
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Entiendo</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!--Modal de fecha-->
+    <div class="modal fade" id="example" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Fecha de la venta</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+            <img loading="lazy" class="img-fluid" src="assets/images/fecha-indicador.jpg" alt="">
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Entiendo</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+    
+            $("#next-1").click(function(e){
+                $("#first").hide();
+                $("#second").show();
+                $("#third").hide();
+                $("#progressBar").css("width","60%");
+                $("#progressText").html("Paso - 2");
+            });
+            $("#next-13").click(function(e){
+                $("#first").hide();
+                $("#second").show();
+                $("#third").hide();
+                $("#progressBar").css("width","60%");
+                $("#progressText").html("Paso - 2");
+            });
+            $("#prev-2").click(function(){
+                $("#first").show();
+                $("#second").hide();
+                $("#third").hide();
+                $("#progressBar").css("width","20%");
+                $("#progressText").html("Paso - 1");
+            });
+    
+    
+    
+            $("#next-12").click(function(e){
+                $("#first").hide();
+                $("#second").hide();
+                $("#third").show();
+                $("#progressBar").css("width","60%");
+                $("#progressText").html("Paso - 2");
+            });
+            $("#next-1-1").click(function(e){
+                $("#first").hide();
+                $("#second").hide();
+                $("#third").show();
+                $("#progressBar").css("width","60%");
+                $("#progressText").html("Paso - 2");
+            });
+            $("#prev-3").click(function(){
+                $("#first").show();
+                $("#second").hide();
+                $("#third").hide();
+                $("#progressBar").css("width","20%");
+                $("#progressText").html("Paso - 1");
+            });
+    
+    
+            $('#email1, #email1_1, #email2, #email2_1').bind('copy paste', function(e){
+                e.preventDefault();
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        let opc = 0;
+        let validateForm = false;
+    
+        const getTipoCompra = (type) => {opc = type;}
+    
+        const validate = (type) => {
+            validateForm = true;
+            
+            if($("#ov"+opc).val()== '' || isNaN(parseInt($("#ov"+opc).val()))){
+                $("#ov_err"+opc).html('* Dato Requerido, El Dato debe ser numérico');                           validateForm =  false;
+            }
+            if($("#importe"+opc).val()== '' || isNaN(parseFloat($("#importe"+opc).val())) || parseFloat($("#importe"+opc).val()) < 500){
+                $("#importe_err"+opc).html('* Importe Requerido, Debe ser Numérico, Compra minima $500');       validateForm =  false;
+            }
+            if($("#fecha"+opc).val()== ''){$("#fecha_err"+opc).html('* Fecha Requerida');                       validateForm =  false;}
+            if($("#nombre"+opc).val()== ''){$("#nombre_err"+opc).html('* Nombre completo Requerido');           validateForm =  false;}
+            if($("#cel"+opc).val()== ''){$("#cel_err"+opc).html('* Numero celular Requerido');                  validateForm =  false;}
+
+            if($("#email"+opc).val()== ''){$("#email_err"+opc).html('* Email Requerido');                       validateForm =  false;}
+            if($("#email"+opc+"_1").val()== ''){$("#email_err"+opc+"_1").html('* Confirmar Email Requerido');   validateForm =  false;}
+            if($("#email"+opc).val() !== $("#email"+opc+"_1").val())
+            {$("#email_err"+opc).html('* Confirmación Email no coincide');                                      validateForm =  false;}
+
+            if($("#estado"+opc).val()== ''){$("#estado_err"+opc).html('* Estado Requerido');                    validateForm =  false;}
+            if($("#ciudad"+opc).val()== ''){$("#ciudad_err"+opc).html('* Ciudad Requerido');                    validateForm =  false;}
+    
+    
+    
+            let quest1 = 0, quest2 = 0, quest3 = 0, quest4 = 0;
+            for(i=1; i<=3; i++){
+                if(!document.getElementById("quest1_"+opc+"_"+i).checked ){quest1++;}
+                if(!document.getElementById("quest2_"+opc+"_"+i).checked ){quest2++;}
+                if(!document.getElementById("quest3_"+opc+"_"+i).checked ){quest3++;}
+                if(!document.getElementById("quest4_"+opc+"_"+i).checked ){quest4++;}
+            }
+    
+            if(quest1 == 3){$("#quest1_"+opc+"_err").html('* Contestar Pregunta');  validateForm =  false;}
+            if(quest2 == 3){$("#quest2_"+opc+"_err").html('* Contestar Pregunta');  validateForm =  false;}
+            if(quest3 == 3){$("#quest3_"+opc+"_err").html('* Contestar Pregunta');  validateForm =  false;}
+            if(quest4 == 3){$("#quest4_"+opc+"_err").html('* Contestar Pregunta');  validateForm =  false;}
+        }
+    
+        const getBoletos = async() => {
+            try {
+                validate(opc);
+    
+                if(validateForm && opc > 0){
+    
+                    let TypePurchase = opc;
+                    let OrderId = document.getElementById("ov"+opc).value;
+                    let Amount = document.getElementById("importe"+opc).value;
+                    let PurchaseDate = document.getElementById("fecha"+opc).value;
+                    let Name = document.getElementById("nombre"+opc).value;
+                    let Phone = document.getElementById("cel"+opc).value;
+                    let Mail = document.getElementById("email"+opc).value;
+                    let State = document.getElementById("estado"+opc).value;
+                    let City = document.getElementById("ciudad"+opc).value;
+                    let body = {TypePurchase, Name, Mail, Phone, State, City, Amount, PurchaseDate, OrderId};
+
+                    //document.getElementById('second').style.display='none';
+                    //document.getElementById('resultado').style.display;
+                    
+                    $("#second").hide();
+                    $("#third").hide();
+                    $("#resultado").show();
+    
+                    
+                    const request = await fetch(`http://200.94.72.238:5008/api/v1/back/registro-verano`, {
+                        method:'POST',
+                        headers:{
+                            'Content-Type':'application/json'
+                        },
+                        body:JSON.stringify(body)
+    
+                    });
+    
+                    const response = await request.json();
+                    console.log(response);
+                    
+                    document.getElementById('result-text').innerHTML = response.dataAPI.textAux +
+                    `<br /><br /><button class="btn btn__greene" onclick="location.reload(true);">Finalizar</button>`;//*/
+                    
+                    $("#progressBar").css("width","100%");
+                }
+                else{
+                    
+                    Swal.fire({
+                        allowOutsideClick: false,
+                        icon: 'error',
+                        title: 'Formulario incompleto',
+                        text: 'Todos los campos son requeridos',
+                    });
+                }
+    
+            } catch (error) {
+                console.log('ERROR', error);
+            }
+        }
+    
+    </script>
+</body>
+</html>
